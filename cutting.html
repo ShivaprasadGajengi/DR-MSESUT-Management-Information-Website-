@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ribbon Cutting</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+      margin: 0;
+    }
+
+    .ribbon-container {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .ribbon {
+      width: 300px;
+      height: 40px;
+      background: red;
+      position: relative;
+      transition: transform 1s ease-in-out;
+      border-radius: 8px;
+    }
+
+    .cut-left {
+      transform: rotate(-20deg) translateX(-200px);
+    }
+
+    .cut-right {
+      transform: rotate(20deg) translateX(200px);
+    }
+
+    .scissors {
+      width: 40px;
+      position: absolute;
+      top: -20px;
+      left: 130px;
+      transition: transform 1s ease-in-out;
+    }
+
+    .cut {
+      transform: translateY(60px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ribbon-container" id="cutBtn">
+    <img src="https://cdn-icons-png.flaticon.com/512/166/166893.png" class="scissors" id="scissor" />
+    <div class="ribbon" id="ribbonLeft"></div>
+    <div class="ribbon" id="ribbonRight" style="margin-top: -40px;"></div>
+  </div>
+
+  <script>
+    const cutBtn = document.getElementById("cutBtn");
+    const ribbonLeft = document.getElementById("ribbonLeft");
+    const ribbonRight = document.getElementById("ribbonRight");
+    const scissor = document.getElementById("scissor");
+
+    cutBtn.addEventListener("click", () => {
+      ribbonLeft.classList.add("cut-left");
+      ribbonRight.classList.add("cut-right");
+      scissor.classList.add("cut");
+
+      // Redirect to homepage after animation (1s)
+      setTimeout(() => {
+        window.location.href = "index.html";  // change to your homepage
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

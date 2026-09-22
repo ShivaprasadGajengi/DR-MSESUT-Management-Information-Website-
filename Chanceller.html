@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dr.Manmohan Singh Earth Sciences University of Telangana</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Style -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Multi-level Dropdown CSS -->
+  <style>
+    /* === Dropdown Base === */
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block;
+  
+}
+.navbar{
+  background-color: red;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+ 
+}
+
+    /* === Submenu positioning === */
+    /* Position submenu */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: -1px;
+  display: none;
+}
+
+    /* === Show only hovered submenu === */
+    .dropdown-submenu:hover>.dropdown-menu {
+      display: block;
+    }
+
+    /* === Prevent both submenus open together === */
+    .dropdown-menu>.dropdown-submenu:hover~.dropdown-submenu>.dropdown-menu {
+      display: none;
+    }
+
+    /* Optional — better alignment */
+    .dropdown-menu a {
+      white-space: nowrap;
+    }
+
+    /* Disable CTRL + Inspect Shortcut */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+ /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .links-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Quick {
+      padding: 0;
+      font-size: 1.8rem;
+    }
+  }
+.img-fluid{
+  width: 100%;
+  height: 600px;
+}
+
+.profile-img {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff007f, #00f0ff, #ffae00, #8e2de2);
+    background-size: 300% 300%;
+    animation: borderMove 6s infinite alternate;
+  }
+
+  .profile-img img {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  @keyframes borderMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Smooth blinking effect for heading */
+  .blink-text {
+    font-weight: 700;
+    color: #0d6efd;
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; text-shadow: 0 0 15px #00f0ff, 0 0 30px #ff007f; }
+    50% { opacity: 0.7; text-shadow: 0 0 5px #00f0ff; }
+  }
+
+  /* Improve layout spacing */
+  .badge {
+    font-size: 0.9rem;
+    margin: 2px;
+  }
+
+  .wow {
+    visibility: visible !important; /* Optional if wow.js is not used */
+  }
+  
+    /* ============================= */
+    /* Quick Links */
+    /* ============================= */
+    .quick-links {
+      text-align: center;
+      margin-bottom: 0px;
+      width: 100%;
+      padding: 10px 10px;
+    }
+
+    .Quick {
+
+      margin-bottom: 40px;
+      color: #fff;
+      text-transform: uppercase;
+
+      align-items: center;
+      font-size: 2rem;
+      padding: 0px 650px;
+    }
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      /* makes cards stay in one line or next line if needed */
+      gap: 25px;
+    }
+
+    .quick-link-item {
+      flex: 1 1 100px;
+      /* ensures equal width for all cards */
+      max-width: 600px;
+      /* fix equal size */
+      height: 180px;
+      /* equal height for all */
+      background: linear-gradient(145deg, #1a237e, #0d154d);
+      color: white;
+      text-decoration: none;
+      border-radius: 15px;
+      padding: 0px 0px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .quick-link-item:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      background: linear-gradient(145deg, #283593, #1a237e);
+    }
+
+    .quick-link-item img {
+      width: 150px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .quick-link-item span {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+    }
+
+    .site-footer h2 {
+      color: #0b4770;
+      padding: 20px 0px 0px 650px;
+
+    }
+    .navbar {
+  background-color: #0e5b92 !important;
+}
+.navbar .nav-link {
+  color: #fff !important;
+}
+/* .navbar .nav-link:hover {
+  color: red !important;
+} */
+        /* HERO SLIDER BASE */
+.slider {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide15 30s infinite;
+}
+
+.slide {
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* TEXT ONLY ON FIRST SLIDE */
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 60%;
+  z-index: 2;
+  opacity: 0;
+  animation: textDrop 1.2s ease-out forwards;
+}
+
+.slide:not(:first-child) .slide-text {
+  display: none;
+}
+
+.slide-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.slide-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.btn1 {
+  background: #00aaff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+ @keyframes slide15 {
+  0%   { transform: translateX(0%); }
+  6.66%   { transform: translateX(0%); }
+
+  10%  { transform: translateX(-100%); }
+  16.66% { transform: translateX(-100%); }
+
+  /* 20%  { transform: translateX(-200%); }
+  26.66% { transform: translateX(-200%); }
+
+  30%  { transform: translateX(-300%); }
+  36.66% { transform: translateX(-300%); }
+
+ 40%  { transform: translateX(-400%); }
+  46.66% { transform: translateX(-400%); }
+
+   50%  { transform: translateX(-500%); }
+  56.66% { transform: translateX(-500%); }
+
+   60%  { transform: translateX(-600%); }
+  66.66% { transform: translateX(-600%); } */
+
+ /* 70%  { transform: translateX(-700%); }
+  76.66% { transform: translateX(-700%); }
+
+  80%  { transform: translateX(-800%); }
+  86.66% { transform: translateX(-800%); }
+
+  90%  { transform: translateX(-900%); }
+  96.66% { transform: translateX(-900%); }
+
+  100% { transform: translateX(-1000%); } */
+}
+
+
+@keyframes textDrop {
+  0% { transform: translateY(-80px); opacity: 0; }
+  100% { transform: translateY(-50%); opacity: 1; }
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+   ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .slider { height: 450px; }
+  .slide img { height: 450px; }
+  .slide-text h1 { font-size: 40px; }
+}
+
+/* Normal Phones */
+@media (max-width: 768px) {
+  .slider { height: 320px; }
+  .slide img { height: 320px; }
+  .slide-text { left: 6%; max-width: 85%; }
+  .slide-text h1 { font-size: 26px; }
+  .slide-text h2 { font-size: 16px; }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .slider { height: auto; }
+  .slide img { height: auto;
+    width: 100%;
+    object-fit: fill;  }
+  .slide-text { top: 52%; max-width: 90%; }
+  .slide-text h1 { font-size: 18px; }
+  .slide-text h2 { font-size: 12px; }
+  .btn1 { padding: 6px 14px; font-size: 11px; }
+}
+/* VERY SMALL DEVICES (max-width: 320px) */
+@media (max-width: 320px) {
+  .slider {
+    height: 220px;   /* automatic safe height */
+  }
+
+  .slide img {
+    height: 180px;
+      /* show full image */
+   
+  }
+
+  .slide-text {
+    top: 55%;
+    max-width: 90%;
+  }
+
+  .slide-text h1 {
+    font-size: 16px;
+  }
+
+  .slide-text h2 {
+    font-size: 12px;
+  }
+
+  .btn1 {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
+  </style>
+
+  <!-- Disable Inspect Shortcut -->
+    <script>
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+  <script>
+document.addEventListener('keydown', function(e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I") ||
+        (e.ctrlKey && e.shiftKey && e.key === "C") ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+    }
+});
+</script>
+  <script>
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey) event.preventDefault();
+      if (event.keyCode == 123) event.preventDefault();
+    });
+
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const submenus = document.querySelectorAll(".dropdown-submenu");
+
+  submenus.forEach((submenu) => {
+    submenu.addEventListener("mouseenter", () => {
+
+      // CLOSE ALL OTHER SUBMENUS
+      document.querySelectorAll(".dropdown-submenu .dropdown-menu").forEach((menu) => {
+        menu.style.display = "none";
+      });
+
+      // OPEN ONLY THE HOVERED SUBMENU
+      submenu.querySelector(".dropdown-menu").style.display = "block";
+    });
+
+    submenu.addEventListener("mouseleave", () => {
+      submenu.querySelector(".dropdown-menu").style.display = "none";
+    });
+  });
+
+});
+</script>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary">Dr MSESUT</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+
+        <!-- About -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="#" class="dropdown-item">ESUT</a>
+            <a href="Vission.html" class="dropdown-item">Vision & Mission</a>
+          </div>
+        </div>
+
+        <!-- Administration -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administration</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="Chanceller.html" class="dropdown-item">Chancellor</a>
+            <a href="Vice_Chanceller.html" class="dropdown-item">Vice Chancellor</a>
+            <a href="Registrar.html" class="dropdown-item">Registrar</a>
+            <a href="Executive_Council.html" class="dropdown-item">Executive Council</a>
+            <a href="Standing_Committe.html" class="dropdown-item">Standing Committee</a>
+            <a href="FinanceOffices.html" class="dropdown-item">Finance Officer</a>
+            <a href="Controller_of_Examination.html" class="dropdown-item">Controller of Examinations</a>
+            <a href="Dean.html" class="dropdown-item">Dean</a>
+            <a href="Pirncipal.html" class="dropdown-item">Principal</a>
+          </div>
+        </div>
+
+        <!-- Academics -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+          <div class="dropdown-menu m-0">
+            <a href="Courses.html" class="dropdown-item">Courses</a>
+            <a href="Academic_Calender.html" class="dropdown-item">Academic Calendar</a>
+            <a href="Academic_Regulations.html" class="dropdown-item">Academic Regulations</a>
+            <a href="Syllabus.html" class="dropdown-item">Syllabus</a>
+            <a href="FeeStructure_ScholerShip.html" class="dropdown-item">Scholarships</a>
+          </div>
+        </div>
+
+        <!-- ✅ Departments (Multi-level Dropdown) -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Departments</a>
+          <ul class="dropdown-menu">
+
+            <!-- B.Tech -->
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-item dropdown-toggle">B.Tech</a>
+              <ul class="dropdown-menu">
+                <li><a href="Mining.html" class="dropdown-item">Mining Engineering</a></li>
+                <li><a href="Computer_Science.html" class="dropdown-item">Computer Science Engineering</a></li>
+                <li><a href="EEE.html" class="dropdown-item">Electrical & Electronics Engineering</a></li>
+                <li><a href="ECE.html" class="dropdown-item">Electronics & Communication Engineering</a></li>
+                <li><a href="IT.html" class="dropdown-item">Information Technology</a></li>
+                <li><a href="H&S.html" class="dropdown-item">H&S</a></li>
+              </ul>
+            </li>
+
+           <!-- B.Sc -->
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-item dropdown-toggle">B.Sc</a>
+              <ul class="dropdown-menu">
+                <li><a href="Environmental_Scince.html" class="dropdown-item">Environmental Science</a></li>
+                <li><a href="Geology.html" class="dropdown-item">Geology</a></li>
+              </ul>
+            </li>
+            <!-- M.Sc -->
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-item dropdown-toggle">M.Sc</a>
+              <ul class="dropdown-menu">
+                <li><a href="Environmental_Scince.html" class="dropdown-item">Environmental Science</a></li>
+                <li><a href="Geology.html" class="dropdown-item">Geology</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Facilities -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Facilities</a>
+          <div class="dropdown-menu m-0">
+            <a href="Library.html" class="dropdown-item">Library</a>
+            <a href="Hostels.html" class="dropdown-item">Hostels</a>
+            <a href="http://117.238.240.2/ecap/default.aspx" class="dropdown-item">CMS</a>
+          </div>
+        </div>
+
+        <a href="Examination_Portal.html" class="nav-item nav-link">Examination</a>
+
+        <!-- Placements -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Placements</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="Placement_Cell.html" class="dropdown-item">Placement Cell</a>
+            <a href="Placement_Statistics.html" class="dropdown-item">Placement Statistics</a>
+          </div>
+        </div>
+
+        <a href="#footer" class="nav-item nav-link">Contact</a>
+
+        <!-- Footer End -->
+
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- HERO SLIDER -->
+<div class="slider">
+  <div class="slides">
+
+    <!-- Slide 1 with Text -->
+    <div class="slide">
+      <img src="image/carousel-2.jpg" alt="">
+      <div class="slide-text">
+        <h2>Chanceller</h2>
+        <h1>Dr.Manmohan Singh Earth Sciences University of Telangana</h1>
+        <a href="Contact_us.html" class="btn1">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="image/carousel-1.jpg" alt="">
+    </div>
+  </div>
+</div>
+  <!-- About End -->
+
+  <!-- About Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+
+        <!-- Image Section -->
+        <div class="col-lg-4 text-center wow fadeInLeft" data-wow-delay="0.2s">
+          <div class="profile-img">
+            <img src="image/jishnu.jpeg" class="rounded-circle img-thumbnail" alt=" Chancellor">
+          </div>
+          <div class="mt-3">
+            <span class="badge bg-success">Shri Jishnu Dev Varma</span><br>
+            <span class="badge bg-success">Chancellor</span>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
+          <h6 class="section-title bg-white text-start text-primary pe-3">Dr MSESUT</h6>
+          <h1 class="mb-4 blink-text">Shri Jishnu Dev Varma</h1>
+          <p align="justify"> Shri Jishnu Dev Varma currently serves as the Chancellor of the Dr Manmohan Singh Earth
+            Sciences University.</p>
+          <p align="justify">Shri Jishnu Dev Varma serves as the Chancellor of Dr. Manmohan Singh Earth Sciences
+            University and provides guidance in strengthening the institution’s academic and administrative vision. A
+            respected leader from Tripura, he has made significant contributions in the fields of governance, education,
+            and public welfare. He previously served as the Deputy Chief Minister of Tripura, where he played an
+            important role in policy development and state progress.</p>
+          <p align="justify">As a member of the historic Manikya Royal family, Shri Jishnu Dev Varma has been actively
+            involved in preserving cultural heritage while encouraging modern education and innovation. His leadership
+            focuses on promoting quality education, research-based learning, and the holistic development of students.
+          </p>
+          <p align="justify">In his role as Chancellor, he supports the University in fostering a learning environment
+            that encourages knowledge, discipline, character-building, and community responsibility. His vision inspires
+            the University to prepare students to contribute meaningfully to society and to pursue excellence in their
+            academic and professional journeys.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    
+    <div class="quick-links">
+
+      <div class="links-container">
+        <a href="Academic_Calender.html" class="quick-link-item"><img src="image/Academin_cal.png"><span>Academic
+            Calendar</span></a>
+        <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=909751" class="quick-link-item"><img
+            src="image/Online_payments.jpeg"><span>Online Payments</span></a>
+        <a href="FeeStructure_ScholerShip.html" class="quick-link-item"><img
+            src="image/Scholarship.jpeg"><span>Scholarships</span></a>
+        <a href="Syllabus.html" class="quick-link-item"><img src="image/Syllabus.jpg"><span>Syllabus</span></a>
+        <a href="Placement_Cell.html" class="quick-link-item"><img src="image/placement.png"><span>Placements</span></a>
+        <a href="Contact_us.html" class="quick-link-item"><img src="image/Contact_us.jpeg"><span>Contact Us</span></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Start -->
+   <footer id="footer">
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Quick Link</h4>
+          <a class="btn btn-link" href="#">About Us</a><br>
+          <a class="btn btn-link" href="#">Contact Us</a><br>
+          <a class="btn btn-link" href="#">Privacy Policy</a><br>
+          <a class="btn btn-link" href="#">Terms & Condition</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Contact</h4>
+          <p class="mb-2">Registrar,<br>Earth Sciences University, Bhadradri Kothagudem Telangana 507115</p>
+          <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 85003 78530, 31</p>
+          <p class="mb-2"><i class="fa fa-envelope me-3"></i>registrardrmsesut@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; Disclaimer: Copyright © 2025 Dr.Manmohan Singh Earth Sciences University of Telangana.<span style="background: linear-gradient(90deg, #ff4d4d, #ffcc00, #33ccff, #9966ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;"> Designed & Developed
+              By
+              T.Saikiran & K.SriHari B.tech(CSE) Batch(2022-2026)</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+ 
+  </div>
+</body>
+
+
+</html>
+
